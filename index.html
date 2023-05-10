@@ -30,6 +30,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style1.css">
 
 
 </head>
@@ -260,7 +261,8 @@
                   src="https://images.sampleforms.com/wp-content/uploads/2019/12/Travel-Booking-Form.jpg" class=""
                   alt=""></div>
               <h4 class=""><a href="">Travel Planning and Bookings</a></h4>
-              <p>Let Ronny Ferns Travel handle all your travel planning and booking needs for a stress-free and unforgettable experience.</p>
+              <p>Let Ronny Ferns Travel handle all your travel planning and booking needs for a stress-free and
+                unforgettable experience.</p>
             </div>
           </div>
 
@@ -269,7 +271,8 @@
             <div class="icon-box">
               <div class="icon event"><img src="assets/img/event.png" class="" alt=""></div>
               <h4><a href="">Event Planning</a></h4>
-              <p>Creating unforgettable experiences through meticulous planning and attention to detail is our top priority in event planning</p>
+              <p>Creating unforgettable experiences through meticulous planning and attention to detail is our top
+                priority in event planning</p>
             </div>
           </div>
 
@@ -280,7 +283,8 @@
                   src="https://goaadventure.in/wp-content/uploads/2020/12/Parasailing-goa-water-sports.jpg" class=""
                   alt=""></div>
               <h4><a href="">Entertainment and Activities</a></h4>
-              <p>From thrilling adventures to relaxing leisure, we offer a wide range of entertainment and activities to suit every interest and preference.</p>
+              <p>From thrilling adventures to relaxing leisure, we offer a wide range of entertainment and activities to
+                suit every interest and preference.</p>
             </div>
           </div>
 
@@ -290,7 +294,8 @@
                   src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/01/28140058/shutterstock_631852175.jpg"
                   class="" alt=""></div>
               <h4><a href="">Beach Weddings </a></h4>
-              <p>Say 'I do' with sand between your toes and the ocean breeze in your hair, with Ronny Ferns Travel's exceptional beach wedding planning services.</p>
+              <p>Say 'I do' with sand between your toes and the ocean breeze in your hair, with Ronny Ferns Travel's
+                exceptional beach wedding planning services.</p>
             </div>
           </div>
 
@@ -300,7 +305,8 @@
                   src="https://www.airvistara.com/content/dam/airvistara/global/english/club-vistara/partners/images/Booking_landing_page_banner.jpg"
                   class="" alt=""></div>
               <h4><a href="" class="text-bold">Accommodation and Lodging</a></h4>
-              <p>Find your home away from home with our handpicked selection of comfortable and luxurious accommodation options.</p>
+              <p>Find your home away from home with our handpicked selection of comfortable and luxurious accommodation
+                options.</p>
             </div>
           </div>
 
@@ -309,8 +315,10 @@
               <div class="icon"><img
                   src="https://5.imimg.com/data5/XD/SW/EJ/GLADMIN-82514924/innova-touring-500x500-500x500.jpg" class=""
                   alt=""></div>
-              <h4><a href="">Transportation Services</a></h4>
-              <p>Effortlessly navigate your destination with our reliable and convenient transportation services.</p>
+              <div id="button10" class="button10">
+                <h4>Transportation Services</h4>
+                <p>Effortlessly navigate your destination with our reliable and convenient transportation services.</p>
+              </div>
             </div>
           </div>
 
@@ -318,7 +326,108 @@
 
       </div>
     </section><!-- End Services Section -->
+    <!--slider starts-->
+    <div id="slidercontainer">
+      <div id="imagesliderclose">
+        &#10006;
+      </div>
+      <div class="img-slider" id="img-slider">
+        <div class="slide active">
+          <img src="assets/img/slider/1.jpg" alt="">
+          <div class="info">
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/img/slider/2.jpg" alt="">
+          <div class="info">
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/img/slider/3.jpg" alt="">
+          <div class="info">
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/img/slider/4.jpg" alt="">
+          <div class="info">
+          </div>
+        </div>
+        <div class="navigation">
+          <div class="btn active"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+      </div>
+    </div>
 
+    <script type="text/javascript">
+      document.getElementById("imagesliderclose").addEventListener("click", function () {
+        console.log(document.getElementById("slidercontainer"));
+        document.getElementById("slidercontainer").style.display = "none"
+        // document.getElementById("slidercontainer").style.display === "none" ? "flex" : "none";
+      })
+
+      document.getElementById("button10").addEventListener("click", function () {
+        console.log(document.getElementById("slidercontainer"));
+        document.getElementById("slidercontainer").style.display = "flex"
+        // document.getElementById("slidercontainer").style.display === "none" ? "flex" : "none";
+      })
+
+      var slides = document.querySelectorAll('.slide');
+      var btns = document.querySelectorAll('.btn');
+      let currentSlide = 1;
+
+      // manual slider
+      var manualNav = function (manual) {
+        slides.forEach((slide) => {
+          slide.classList.remove('active');
+
+          btns.forEach((btn) => {
+            btn.classList.remove('active');
+          });
+        });
+
+        slides[manual].classList.add('active');
+        btns[manual].classList.add('active');
+      }
+
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          manualNav(i);
+          currentSlide = i;
+        });
+      });
+
+      //  autoplay slider
+      var repeat = function (activeClass) {
+        let active = document.getElementsByClassName('active');
+        let i = 1;
+
+        var repeater = () => {
+          setTimeout(function () {
+            [...active].forEach((activeSlide) => {
+              activeSlide.classList.remove('active');
+            });
+
+            slides[i].classList.add('active');
+            btns[i].classList.add('active');
+            i++;
+
+            if (slides.length == i) {
+              i = 0;
+            }
+            if (i >= slides.length) {
+              return;
+            }
+            repeater();
+          }, 3000);
+        }
+        repeater();
+      }
+      repeat();
+    </script>
+    <!--slider ends-->
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
       <div class="container" data-aos="zoom-in">
@@ -504,9 +613,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C1.jpg"
-              class="img-fluid" alt="">
+            <img src="./assets/img/testimonials/C1.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Travel 1</h4>
               <p>Travel</p>
@@ -518,9 +625,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C2.jpg"
-              class="img-fluid" alt="">
+            <img src="./assets/img/testimonials/C2.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Travel 1</h4>
               <p>Travel</p>
@@ -532,9 +637,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C3.jpg"
-              class="img-fluid" alt="">
+            <img src="./assets/img/testimonials/C3.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Travel 1</h4>
               <p>Travel</p>
@@ -546,9 +649,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C4.jpg"
-              class="img-fluid" alt="">
+            <img src="./assets/img/testimonials/C4.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Travel 1</h4>
               <p>Travel</p>
@@ -561,9 +662,7 @@
 
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C5.jpg"
-              class="img-fluid" alt="">
+            <img src="./assets/img/testimonials/C5.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Travel 1</h4>
               <p>Travel</p>
@@ -575,9 +674,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C6.jpg"
-              class="img-fluid" alt="">
+            <img src="./assets/img/testimonials/C6.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Travel 1</h4>
               <p>Travel</p>
@@ -589,9 +686,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C7.jpg"
-              class="img-fluid" alt="">
+            <img src="./assets/img/testimonials/C7.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Travel 1</h4>
               <p>Travel</p>
@@ -603,9 +698,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C8.jpg"
-              class="img-fluid" alt="">
+            <img src="./assets/img/testimonials/C8.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Travel 1</h4>
               <p>Travel</p>
@@ -617,9 +710,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C9.jpg"
-              class="img-fluid" alt="">
+            <img src="./assets/img/testimonials/C9.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Travel 1</h4>
               <p>Travel</p>
@@ -630,23 +721,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C11.jpg"
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Travel 1</h4>
-              <p>Travel</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C12.jpg"
-              class="img-fluid" alt="">
+            <img src="./assets/img/testimonials/C11.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Travel 1</h4>
               <p>Travel</p>
@@ -658,9 +733,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C13.jpg"
-              class="img-fluid" alt="">
+            <img src="./assets/img/testimonials/C12.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Travel 1</h4>
               <p>Travel</p>
@@ -672,9 +745,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C14.jpg"
-              class="img-fluid" alt="">
+            <img src="./assets/img/testimonials/C13.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Travel 1</h4>
               <p>Travel</p>
@@ -686,9 +757,19 @@
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C15.jpg"
-              class="img-fluid" alt="">
+            <img src="./assets/img/testimonials/C14.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Travel 1</h4>
+              <p>Travel</p>
+              <a href="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
+                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i
+                  class="bx bx-plus"></i></a>
+              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
+            <img src="./assets/img/testimonials/C15.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Travel 1</h4>
               <p>Travel</p>
@@ -701,9 +782,7 @@
 
           <var>
             <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-              <img
-                src="./assets/img/testimonials/C16.jpg"
-                class="img-fluid" alt="">
+              <img src="./assets/img/testimonials/C16.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Travel 1</h4>
                 <p>Travel</p>
@@ -715,9 +794,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-              <img
-                src="./assets/img/testimonials/C17.jpg"
-                class="img-fluid" alt="">
+              <img src="./assets/img/testimonials/C17.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Travel 1</h4>
                 <p>Travel</p>
@@ -729,9 +806,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-              <img
-                src="./assets/img/testimonials/C18.jpg"
-                class="img-fluid" alt="">
+              <img src="./assets/img/testimonials/C18.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Travel 1</h4>
                 <p>Travel</p>
@@ -743,9 +818,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-              <img
-                src="./assets/img/testimonials/C19.jpg"
-                class="img-fluid" alt="">
+              <img src="./assets/img/testimonials/C19.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Travel 1</h4>
                 <p>Travel</p>
@@ -757,9 +830,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-              <img
-                src="./assets/img/testimonials/C20.jpg"
-                class="img-fluid" alt="">
+              <img src="./assets/img/testimonials/C20.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Travel 1</h4>
                 <p>Travel</p>
@@ -771,9 +842,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-              <img
-                src="./assets/img/testimonials/C21.jpg"
-                class="img-fluid" alt="">
+              <img src="./assets/img/testimonials/C21.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Travel 1</h4>
                 <p>Travel</p>
@@ -786,9 +855,7 @@
 
             <var>
               <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-                <img
-                  src="./assets/img/testimonials/C22.jpg"
-                  class="img-fluid" alt="">
+                <img src="./assets/img/testimonials/C22.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Travel 1</h4>
                   <p>Travel</p>
@@ -800,9 +867,7 @@
               </div>
 
               <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-                <img
-                  src="./assets/img/testimonials/C23.jpg"
-                  class="img-fluid" alt="">
+                <img src="./assets/img/testimonials/C23.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Travel 1</h4>
                   <p>Travel</p>
@@ -814,7 +879,7 @@
               </div>
             </var>
           </var>
-          
+
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-enter">
             <img
