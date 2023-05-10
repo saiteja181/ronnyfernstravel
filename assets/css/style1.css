@@ -13,7 +13,7 @@
     background: #1D212B;
 }
 
-#slidercontainer {
+/*#slidercontainer {
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -38,6 +38,30 @@
     right: -15;
     position: relative;
 
+}
+*/
+#slidercontainer {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.194);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.imagesliderclose {
+    position: fixed;
+    color: white;
+    background-color: blue;
+    font-size: 50px;
+    z-index: 71;
+    top: 20px;
+    right: 20px;
 }
 
 .img-slider {
