@@ -52,15 +52,7 @@
     top: 0;
     left: 0;
     right: 0;
-    .imagesliderclose {
-        position: fixed;
-        color: white;
-        background-color: blue;
-        font-size: 50px;
-        z-index: 71;
-        top: 20px;
-        right: 20px;
-    }
+    
 }
 
 
@@ -74,6 +66,14 @@
     background: #1D212B;
     align-items: center;
     display: flex;
+    
+}
+
+.img-slider .slide {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
     .imagesliderclose {
         position: fixed;
         color: white;
@@ -83,13 +83,6 @@
         top: 20px;
         right: 20px;
     }
-}
-
-.img-slider .slide {
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    clip-path: circle(0% at 0 50%);
 }
 
 .img-slider .slide.active {
