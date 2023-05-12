@@ -63,15 +63,7 @@
     }
 }
 
-.imagesliderclose {
-    position: fixed;
-    color: white;
-    background-color: blue;
-    font-size: 50px;
-    z-index: 71;
-    top: 20px;
-    right: 20px;
-}
+
 
 .img-slider {
     position: relative;
