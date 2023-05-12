@@ -52,6 +52,15 @@
     top: 0;
     left: 0;
     right: 0;
+    .imagesliderclose {
+        position: fixed;
+        color: white;
+        background-color: blue;
+        font-size: 50px;
+        z-index: 71;
+        top: 20px;
+        right: 20px;
+    }
 }
 
 .imagesliderclose {
