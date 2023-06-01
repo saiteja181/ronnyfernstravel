@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-reem-kufi-ink: "Reem Kufi Ink";
+  --font-rokkitt: Rokkitt;
+
+  /* font sizes */
+  --font-size-32xl-7: 51.7px;
+  --font-size-lg-1: 18.1px;
+  --font-size-lgi-9: 19.9px;
+  --font-size-12xl: 31px;
+  --font-size-xl-7: 20.7px;
+  --font-size-61xl-1: 80.1px;
+  --font-size-9xl-4: 28.4px;
+  --font-size-4xl-3: 23.3px;
+  --font-size-base-9: 15.9px;
+  --font-size-4xl-8: 23.8px;
+
+  /* Colors */
+  --color-gray-100: #122526;
+  --color-white: #fff;
+  --color-darkturquoise: #54cfdb;
+  --color-black: #000;
+
+  /* Paddings */
+  --padding-5xs-8: 7.8px;
+  --padding-79xl-2: 98.2px;
+}
