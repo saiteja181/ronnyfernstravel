@@ -1,0 +1,396 @@
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero1 {
+    width: 100%;
+    height: 90vh;
+    background: url("../img/travel&entertainment/car3.jpg") top left;
+    background-size: cover;
+    position: relative;
+}
+
+#hero1:before {
+    content: "";
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#hero1 .container {
+    position: relative;
+}
+
+#hero1 h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+#hero1 h1 span {
+    color: #106eea;
+}
+
+#hero1 h2 {
+    color: #555555;
+    margin: 5px 0 30px 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#hero1 .btn-get-started {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background: #106eea;
+}
+
+#hero1 .btn-get-started:hover {
+    background: #247cf0;
+}
+
+#hero1 .btn-watch-video {
+    font-size: 16px;
+    transition: 0.5s;
+    margin-left: 25px;
+    color: #222222;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+#hero1 .btn-watch-video i {
+    color: #106eea;
+    font-size: 32px;
+    transition: 0.3s;
+    line-height: 0;
+    margin-right: 8px;
+}
+
+#hero1 .btn-watch-video:hover {
+    color: #106eea;
+}
+
+#hero1 .btn-watch-video:hover i {
+    color: #3b8af2;
+}
+
+@media (min-width: 1024px) {
+    #hero1 {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero1 {
+        height: 100vh;
+    }
+
+    #hero1 h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    #hero1 h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    #hero1 .btn-get-started,
+    #hero1 .btn-watch-video {
+        font-size: 13px;
+    }
+}
+
+@media (max-height: 500px) {
+    #hero1 {
+        height: 120vh;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+
+.section-bg {
+    background-color: #99b9f1;
+}
+
+.section-title1 {
+    text-align: center;
+    padding-bottom: 0px;
+}
+
+.section-title1 h2 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    /*  padding: 8px 20px;*/
+    margin: 0;
+    text-align: left;
+    align-items: left;
+    background: #e7f1fd;
+    color: #106eea;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+
+.section-title1 h3 {
+    margin: 15px 0 0 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.section-title1 h3 span {
+    color: #106eea;
+}
+
+.section-title1 p {
+    margin: 15px auto 0 auto;
+    font-weight: 600;
+}
+
+.row .icon-box .h1tag {
+    text-align: left;
+}
+
+.icon-box .p {
+    text-align: left;
+}
+
+.towardsright {
+    text-align: right;
+}
+
+@media (min-width: 512px) {
+    .section-title1 p {
+        width: 30%;
+    }
+}
+
+.feel {
+    text-align: center;
+}
+
+.col-lg-6 .h3,
+p {
+    text-align: center;
+}
+
+
+
+/*slider card-----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: center;
+    min-height: 75vh;
+    background: linear-gradient(#ffffff, #ffffff);
+}
+
+.wrapper {
+    max-width: 1250px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+/*arrows positions*/
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+    left: -22px;
+}
+
+.wrapper i:last-child {
+    right: -22px;
+}
+
+/*card flex box ;ayout */
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 2) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 50px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+/*
+.carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
+.carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.carousel .card .img {
+    background: #8B53FF;
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
+}
+
+
+.card .img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+}
+
+.carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+}
+
+.carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+.car-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.car-details {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1%;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.car-sli {
+    align-items: flex-end;
+    height: 200px;
+    width: 250px;
+    justify-content: flex-end;
+
+}
+
+.right {
+    width: 250px;
+    height: 170px;
+    margin-left: 20px;
+}
+
+.h2 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1%;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.fa-solid .fa-person-seat {
+    margin-right: 10px;
+}
+
+
+/*.card img {
+    /* Adjust the size and positioning of the image */
+/* width: 100px;
+    height: 100px;
+    margin-left: auto;
+    /* Pushes the image to the right */
+/*}
