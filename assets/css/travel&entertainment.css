@@ -193,6 +193,11 @@ text-align: left;
     text-align: left;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.col-lg-4:hover .h1tag,
+  .col-lg-4:hover .towardsright {
+    color: blue;
+  }
 .icon-box .p {
     text-align: left;
 }
@@ -220,6 +225,146 @@ p {
 
 
 /*slider card-----------------*/
+
+.frame-131,
+.frame-131 * {
+  box-sizing: border-box;
+}
+.frame-131 {
+    margin-left: 400px;
+  background: #ffffff;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  width: 572px;
+  height: 362px;
+  position: relative;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.ellipse-19 {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 53px;
+  top: 242px;
+  object-fit: contain;
+}
+.ellipse-20 {
+  background: #ffffff;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 156px;
+  top: 242px;
+}
+.image-59 {
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  left: 164px;
+  top: 251px;
+}
+._4-seats {
+  color: #000000;
+  text-align: left;
+  font: 400 20px "Inter", sans-serif;
+  position: absolute;
+  left: 31px;
+  top: 308px;
+  width: 72px;
+  height: 54px;
+}
+._2-bags {
+  color: #000000;
+  text-align: left;
+  font: 400 20px "Inter", sans-serif;
+  position: absolute;
+  left: 148px;
+  top: 308px;
+}
+.frame-140 {
+  width: 254px;
+  height: 150px;
+  position: absolute;
+  left: 290px;
+  top: 100px;
+  overflow: hidden;
+}
+.toyota-innova {
+  color: #000000;
+  text-align: left;
+  font: 600 36px "Outfit", sans-serif;
+  position: absolute;
+  left: 270px;
+  top: 266px;
+}
+.row-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .ec {
+    flex: 1;
+  }
+  .st{
+    margin-right:30px;
+    font-size:24px;
+    color:#000000;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+  }
+  .pr{
+    color: #555555;
+    padding-left: 90px;
+  }
+.ec{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+}
+.carousel-control-prev,
+  .carousel-control-next {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+    transition: opacity 0.15s ease;
+    top: calc(50% - 25px);
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-image: none;
+    color: #000;
+  }
+
+  .carousel-control-prev-icon::before,
+  .carousel-control-next-icon::before {
+    content: '<';
+    font-size: 2rem;
+    line-height: 2;
+  }
+
+  .carousel-control-next-icon::before {
+    content: '>';
+  }
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 .wrapper {
@@ -258,6 +403,10 @@ p {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
     transform: translateY(-50%);
     transition: transform 0.1s linear;
+}
+
+.carouselExample{
+    margin-left:1px;
 }
 
 /*arrows positions*/
