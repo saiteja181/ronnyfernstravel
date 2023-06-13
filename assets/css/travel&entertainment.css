@@ -4,7 +4,7 @@
 #hero1 {
     width: 100%;
     height: 90vh;
-    background: url("../img/travel&entertainment/car3.jpg") top left;
+    background: url("https://blog.travelcarma.com/wp-content/uploads/2017/06/car-rental-banner.jpg") top left;
     background-size: cover;
     position: relative;
 }
@@ -129,6 +129,9 @@ section {
     padding: 30px 0;
     overflow: hidden;
 }
+.row{
+    margin-top:40px;
+}
 
 
 .section-bg {
@@ -171,12 +174,26 @@ section {
 }
 
 .row .icon-box .h1tag {
+    
     text-align: left;
+    font-size:30px;
 }
 
+.row .icon-box .cartype {
+    margin-top:10px;
+font-size:20px;
+text-align: left;
+}
+
+.row .icon-box .economy{
+    font-size:15px;
+    text-align: left;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .icon-box .p {
     text-align: left;
 }
+
 
 .towardsright {
     text-align: right;
