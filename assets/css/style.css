@@ -960,6 +960,10 @@ section {
   transition: all ease-in-out 0.3s;
   background: #fff;
 }
+.trans{
+  height:175px;
+  object-fit:cover;
+}
 
 .services .icon-box .icon {
   margin: 0 auto;
@@ -971,6 +975,7 @@ section {
   justify-content: center;
   margin-bottom: 20px;
   transition: ease-in-out 0.3s;
+  object-fit: cover;
 }
 
 
