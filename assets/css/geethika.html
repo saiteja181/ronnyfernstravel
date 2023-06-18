@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    .dropdown-menu {
+        background-color: #ff0000;
+        width: 100%;
+        height: 1000px;
+    }
+
+    .dropdown {
+        min-width: 10em;
+        position: relative;
+        margin: 2em;
+    }
+
+    .dropdown * {
+        box-sizing: border-box;
+        width: 150px;
+    }
+
+    .select {
+        background: #ffffff;
+        width: 150px;
+        color: #ff0000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px white solid;
+        border-radius: 0.5em;
+        padding: 1px;
+        font-weight: bold;
+    }
+
+    .select-clicked {
+        border: 2px #ffffff solid;
+        background: #ff0000;
+
+    }
+
+    .caret {
+        width: 0;
+        height: 0;
+        margin-right: 20px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid #ff0000;
+        transition: 0.3s;
+    }
+
+    .caret-rotate {
+        transform: rotate(180deg);
+    }
+
+    .menu {
+        list-style: none;
+        padding: 0.2em 0.5em;
+        background: #ffffff;
+        border: 2px #ffffff solid;
+        border-radius: 0.5em;
+        color: #ff0000;
+        position: absolute;
+        left: 5%;
+        top: 2.5em;
+        width: 150px;
+        transform: translateX(-50%);
+        font-weight: bold;
+        opacity: 0;
+        display: none;
+        transition: 0.2s;
+    }
+
+    .menu li {
+        padding: 0.7em 0.5em;
+        margin: 0.3em 0;
+        border-radius: 0.5em;
+        cursor: pointer;
+    }
+
+    .menu-open {
+        display: block;
+        opacity: 1;
+    }
+</style>
+
+<body style="">
+    <div class="dropdown">
+        <div class="select">
+            <span class="selected">Pediatrician</span>
+            <div class="caret"></div>
+        </div>
+
+        <ul class="menu">
+            <li>Gynecologist</li>
+            <li>Dermatologist</li>
+            <li>ENT specialist</li>
+            <li>Dentist</li>
+            <li class="active">Pediatrician</li>
+        </ul>
+    </div>
+
+    <script>
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            const select = dropdown.querySelector('.select');
+            const caret = dropdown.querySelector('.caret');
+            const menu = dropdown.querySelector('.menu');
+            const options = dropdown.querySelectorAll('.menu li');
+            const selected = dropdown.querySelector('.selected');
+
+            select.addEventListener('click', () => {
+                select.classList.toggle('select-clicked');
+                caret.classList.toggle('caret-rotate');
+                menu.classList.toggle('menu-open');
+            });
+
+            options.forEach(option => {
+                option.addEventListener('click', () => {
+                    selected.innerText = option.innerText;
+                    select.classList.remove('select-clicked');
+                    caret.classList.remove('caret-rotate');
+                    menu.classList.remove('menu-open');
+                    options.forEach(option => {
+                        option.classList.remove('active');
+                    });
+                    option.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

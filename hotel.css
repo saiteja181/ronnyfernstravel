@@ -1,0 +1,584 @@
+#hero1 {
+    width: 100%;
+    height: 90vh;
+    background: url("https://res-4.cloudinary.com/enchanting/images/w_1600,h_700,c_fill,f_auto/et-web/2018/03/Enchanting-Travels-Peru-Tours-Mancora-Hotels-Kichic-Hotel-pool/hotel-kichic-boutique-peru.jpg") top left;
+    background-size: cover;
+    position: relative;
+}
+
+#hero1:before {
+    content: "";
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#hero1 .container {
+    position: relative;
+}
+
+#hero1 h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+#hero1 h1 span {
+    color:#106eea;
+}
+
+#hero1 h2 {
+    color: #555555;
+    margin: 5px 0 30px 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#hero1 .btn-get-started {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background: #106eea;
+}
+
+#hero1 .btn-get-started:hover {
+    background: #247cf0;
+}
+
+#hero1 .btn-watch-video {
+    font-size: 16px;
+    transition: 0.5s;
+    margin-left: 25px;
+    color: #222222;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+#hero1 .btn-watch-video i {
+    color: #106eea;
+    font-size: 32px;
+    transition: 0.3s;
+    line-height: 0;
+    margin-right: 8px;
+}
+
+#hero1 .btn-watch-video:hover {
+    color: #106eea;
+}
+
+#hero1 .btn-watch-video:hover i {
+    color: #3b8af2;
+}
+
+@media (min-width: 1024px) {
+    #hero1 {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero1 {
+        height: 100vh;
+    }
+
+    #hero1 h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    #hero1 h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    #hero1 .btn-get-started,
+    #hero1 .btn-watch-video {
+        font-size: 13px;
+    }
+}
+
+@media (max-height: 500px) {
+    #hero1 {
+        height: 120vh;
+    }
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 8px;
+    margin-top:20px;
+  }
+  
+  .search-input {
+    flex: 1;
+    border: none;
+    background: none;
+    font-size: 16px;
+    padding: 4px;
+  }
+  
+  .search-input:focus {
+    outline: none;
+  }
+  
+  .search-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+  
+  /* Style the search button icon */
+  .search-button svg {
+    width: 18px;
+    height: 18px;
+    stroke: #106eea;
+  }
+  
+
+  .frame,
+.frame * {
+  box-sizing: border-box;
+}
+.frame {
+  background: rgba(196, 196, 196, 0.18);
+  width: 1441px;
+  height: 1104px;
+  position: relative;
+}
+.auto-layout-horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 219.61px;
+  align-items: center;
+  justify-content: flex-end;
+  width: 817.64px;
+  position: absolute;
+  left: 241px;
+  top: 3769.8px;
+}
+.product {
+  color: #ffffff;
+  text-align: left;
+  font: 700 28.42px "Reem Kufi Ink", sans-serif;
+  position: relative;
+}
+.company {
+  color: #ffffff;
+  text-align: left;
+  font: 700 28.42px "Reem Kufi Ink", sans-serif;
+  position: relative;
+}
+.contact-us {
+  color: #ffffff;
+  text-align: left;
+  font: 700 28.42px "Reem Kufi Ink", sans-serif;
+  position: relative;
+}
+.auto-layout-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 241px;
+  top: 3828.8px;
+}
+.home {
+  color: #ffffff;
+  text-align: left;
+  font: 400 23.25px "Reem Kufi Ink", sans-serif;
+  position: relative;
+}
+.about {
+  color: #ffffff;
+  text-align: left;
+  font: 400 23.25px "Reem Kufi Ink", sans-serif;
+  position: relative;
+}
+.find-hotel {
+  color: #ffffff;
+  text-align: left;
+  font: 400 23.25px "Reem Kufi Ink", sans-serif;
+  position: relative;
+}
+.facilities {
+  color: #ffffff;
+  text-align: left;
+  font: 400 23.25px "Reem Kufi Ink", sans-serif;
+  position: relative;
+}
+.auto-layout-vertical2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 566px;
+  top: 3828.8px;
+}
+.t-o-s {
+  color: #ffffff;
+  text-align: left;
+  font: 400 23.25px "Reem Kufi Ink", sans-serif;
+  position: relative;
+}
+.privacy-policy {
+  color: #ffffff;
+  text-align: left;
+  font: 400 23.25px "Reem Kufi Ink", sans-serif;
+  position: relative;
+}
+.careers {
+  color: #ffffff;
+  text-align: left;
+  font: 400 23.25px "Reem Kufi Ink", sans-serif;
+  position: relative;
+}
+.faq {
+  color: #ffffff;
+  text-align: left;
+  font: 400 23.25px "Reem Kufi Ink", sans-serif;
+  position: relative;
+}
+.auto-layout-vertical3 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 914px;
+  top: 3828.8px;
+}
+.info-ronnyfernstravel-com {
+  color: #ffffff;
+  text-align: left;
+  font: 400 23.25px "Reem Kufi Ink", sans-serif;
+  position: relative;
+}
+._1-50-4855-485 {
+  color: #ffffff;
+  text-align: left;
+  font: 400 23.25px "Reem Kufi Ink", sans-serif;
+  position: relative;
+}
+.goa {
+  color: #ffffff;
+  text-align: left;
+  font: 400 23.25px "Reem Kufi Ink", sans-serif;
+  position: relative;
+}
+.jeeshan-kholi {
+  color: #ffffff;
+  text-align: left;
+  font: 400 20.67px "Reem Kufi Ink", sans-serif;
+  position: absolute;
+  left: 161px;
+  top: 2833.8px;
+}
+.is-a-highly-accomplished-and-influential-individual-who-has-made-significant-contributions-in-his-field-with-his-extensive-knowledge-expertise-and-exceptional-leadership-skills-ronaldo-has-established-himself-as-a-respected-figure-and-a-role-model-for-many {
+  color: #ffffff;
+  text-align: left;
+  font: 300 20.67px "Rokkitt", sans-serif;
+  position: absolute;
+  left: 167.62px;
+  top: 2901.6px;
+  width: 358.74px;
+  height: 133.89px;
+}
+.joseph-stalin {
+  color: #ffffff;
+  text-align: left;
+  font: 700 28.42px "Reem Kufi Ink", sans-serif;
+  position: absolute;
+  left: 930.06px;
+  top: 2834.14px;
+}
+.dircetor {
+  color: #ffffff;
+  text-align: left;
+  font: 400 20.67px "Reem Kufi Ink", sans-serif;
+  position: absolute;
+  left: 930.06px;
+  top: 2878.09px;
+}
+.alana-johnson {
+  color: #ffffff;
+  text-align: left;
+  font: 700 28.42px "Reem Kufi Ink", sans-serif;
+  position: absolute;
+  left: 930.06px;
+  top: 2490.73px;
+}
+.x{
+  color: #ffffff;
+  text-align: left;
+  font: 700 80.09px "Reem Kufi Ink", sans-serif;
+  position: absolute;
+  left: 1239.74px;
+  top: 2692.08px;
+}
+.y {
+  color: #ffffff;
+  text-align: left;
+  font: 700 80.09px "Reem Kufi Ink", sans-serif;
+  position: absolute;
+  left: 1239.74px;
+  top: 3018.11px;
+}
+.z {
+  color: #ffffff;
+  text-align: left;
+  font: 700 80.09px "Reem Kufi Ink", sans-serif;
+  position: absolute;
+  left: 482px;
+  top: 3043.8px;
+}
+.executive-director {
+  color: #ffffff;
+  text-align: left;
+  font: 400 20.67px "Reem Kufi Ink", sans-serif;
+  position: absolute;
+  left: 930.06px;
+  top: 2534.68px;
+}
+.frame-70 {
+  width: 1292.15px;
+  height: 951.63px;
+  position: absolute;
+  left: 94px;
+  top: 57px;
+}
+.rectangle {
+  background: linear-gradient(to left, #ffffff, #ffffff);
+  width: 622.43px;
+  height: 460px;
+  position: absolute;
+  left: 0px;
+  top: 221.36px;
+}
+.rectangle2 {
+  width: 517px;
+  height: 272px;
+  position: absolute;
+  left: 733px;
+  top: 505.36px;
+}
+.frame-72 {
+  width: 127px;
+  height: 34px;
+  position: absolute;
+  left: 1104px;
+  top: 322px;
+}
+.rectangle-1 {
+  background: #5292e9;
+  border-radius: 20px;
+  width: 127px;
+  height: 34px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.frame-73 {
+  width: 127px;
+  height: 34px;
+  position: absolute;
+  left: 1123px;
+  top: 774px;
+}
+.rectangle-12 {
+  background: #5292e9;
+  border-radius: 20px;
+  width: 127px;
+  height: 34px;
+  position: absolute;
+  left: 1104px;
+  top: 823px;
+}
+.auto-layout-vertical4 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 734.11px;
+  top: 816.62px;
+}
+.frame2 {
+  flex-shrink: 0;
+  width: 176px;
+  height: 47px;
+  position: relative;
+}
+.hostels {
+  color: #106eea;
+  text-align: left;
+  font: 800 31px "Inter", sans-serif;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.visit-now {
+  color: #ffffff;
+  text-align: center;
+  font: 700 19.9px "Reem Kufi Ink", sans-serif;
+  position: absolute;
+  left: 466px;
+  top: 729px;
+}
+.rectangle3 {
+  width: 517.16px;
+  height: 301.5px;
+  position: absolute;
+  left: 733.09px;
+  top: 0px;
+}
+.our-most-popular-facilities-lovedby-all {
+  text-align: left;
+  font: 700 48px "Inter", sans-serif;
+  position: absolute;
+  left: 58px;
+  top: 35px;
+}
+.our-most-popular-facilities-lovedby-all-span {
+  color: #000000;
+  font: 700 48px "Inter", sans-serif;
+}
+.our-most-popular-facilities-lovedby-all-span2 {
+  color: #106eea;
+  font: 700 48px "Inter", sans-serif;
+}
+.our-most-popular-facilities-lovedby-all-span3 {
+  color: #000000;
+  font: 700 48px "Inter", sans-serif;
+}
+.our-most-popular-facilities-lovedby-all-span4 {
+  color: #106eea;
+  font: 700 48px "Inter", sans-serif;
+}
+.our-most-popular-facilities-lovedby-all-span5 {
+  color: #000000;
+  font: 700 48px "Inter", sans-serif;
+}
+.visit-now2 {
+  color: #ffffff;
+  text-align: center;
+  font: 700 19.9px "Inter", sans-serif;
+  position: absolute;
+  left: 466px;
+  top: 732px;
+}
+.visit-now3 {
+  color: #ffffff;
+  text-align: center;
+  font: 700 17px "Inter", sans-serif;
+  position: absolute;
+  left: 1127px;
+  top: 327px;
+}
+.hotels {
+  color: #5292e9;
+  text-align: left;
+  font: 800 31px "Inter", sans-serif;
+  position: absolute;
+  left: 745px;
+  top: 318px;
+}
+.discover-unparalleled-comfort-and-impeccable-service-at-our-exquisite-hotel-where-every-stay-is-a-memorable-experience {
+  color: #000000;
+  text-align: left;
+  font: 400 18.09px "Inter", sans-serif;
+  position: absolute;
+  left: 745px;
+  top: 367px;
+  width: 359px;
+}
+.visit-now4 {
+  color: #ffffff;
+  text-align: center;
+  font: 700 17px "Inter", sans-serif;
+  position: absolute;
+  left: 1127px;
+  top: 830px;
+}
+.experience-budget-friendly-and-vibrant-community-at-our-lively-hostel-where-travelers-become-friends {
+  color: #000000;
+  text-align: center;
+  font: 400 18.09px "Inter", sans-serif;
+  position: absolute;
+  left: 728px;
+  top: 864px;
+  width: 282px;
+}
+.frame-190 {
+  width: 571px;
+  height: 199px;
+  position: absolute;
+  left: 5px;
+  top: 729px;
+}
+.escape-to-paradise-at-our-luxurious-resort-where-serenity-meets-indulgence {
+  color: #000000;
+  text-align: left;
+  font: 400 27px "Inter", sans-serif;
+  position: absolute;
+  left: 3px;
+  top: 74px;
+  width: 392px;
+}
+.resorts {
+  color: #106eea;
+  text-align: left;
+  font: 800 48px "Inter", sans-serif;
+  position: absolute;
+  left: 0px;
+  top: -5px;
+}
+.frame-71 {
+  width: 185px;
+  height: 60px;
+  position: absolute;
+  left: 395px;
+  top: 0px;
+}
+.rectangle-13 {
+  background: #5292e9;
+  border-radius: 20px;
+  width: 185px;
+  height: 60px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.visit-now5 {
+  color: #ffffff;
+  text-align: center;
+  font: 700 24px "Inter", sans-serif;
+  position: absolute;
+  left: 36px;
+  top: 14px;
+}
