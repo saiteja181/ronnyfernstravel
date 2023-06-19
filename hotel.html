@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.css"/>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.min.js"></script>
 
 
 
@@ -41,7 +41,42 @@
     <link rel="stylesheet" href="assets/css/style1.css">
     <link rel="stylesheet" href="./hotel.css">
 
+    
+
 </head>
+<style>
+    .btn {
+        -webkit-border-radius: 30;
+        -moz-border-radius: 30;
+        border-radius: 30px;
+        font-family: Arial;
+        color: #000000;
+        font-size: 15px;
+        background: #ffffff;
+        padding: 5px 60px 5px 60px;
+        font-weight: bolder;
+        border: solid #000000 3px;
+        text-decoration: none;
+
+        margin-top: 30px;
+        margin-left: 25px;
+
+
+    }
+    
+  
+
+  .slid:hover .btn,
+  .slid:hover p ,.slid:hover p{
+    color: blue;
+  }
+  .slidercontainer1{
+    background-color: #ffffff;
+  }
+
+  
+    
+</style>
 
 <body>
 
@@ -71,95 +106,412 @@
         <div class="container" data-aos="zoom-out" data-aos-delay="100">
             <h1>Find The<br> <span>Best Hotels</span> Around</h1>
             <div class="d-flex">
-                <br/>
-                <hr/>
+                <br />
+                <hr />
                 <div class="search-container">
                     <input type="text" class="search-input" placeholder="Search..." />
                     <button type="submit" class="search-button">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8" />
-                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                      </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
                     </button>
-                  </div>
-                  <div class="vector"></div>
-                  
+                </div>
+                <div class="vector"> </div>
+
 
             </div>
         </div>
     </section>
 
+    <!--slider section-->
+
+    <div class="slidershow1">
+
+        <section>
+            <div class="flex overflow-hidden">
+                <div class="w-2/12 flex items-center">
+                    <div class="w-full text-right">
+                        <button onclick="prev() " class="p-3 rounded-full bg- border border-black-1000 rotate-180">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+
+                        </button>
+                    </div>
+                </div>
+                <!--sildeshow-->
+                <div id="slidercontainer1" class=" overflow-hidden w-full" style="text-align:c">
+                    <ul id="slider" class="flex w-10/12 transition-margin duration-700 ">
+<!--=========================First=====================-->
+                        <li class=" p-5 slid ">
+                            <!--room-->
+                            <div class="border shadow-lg" style="height:480px;width:300px;" data-aos="zoom-in"
+                                data-aos-delay="100">
+                                <img style="height:50%;width:100vw;display:inline;margin-bottom:10px;padding:10px;"
+                                    src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fHww&w=1000&q=80">
+                                <!--star-->
+                                <div class=" ml-4 "><img style="width:25px;height:25px;display:inline;"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4rLciEXuPwXqV9NPx4kaQpwXciuIpUFH_Og9PZ8TZRw&s">
+                                    </img>
+                                    <p
+                                        style="display:inline;float:right;font-weight:bold;font-size:20px;color:#000000;margin:10px">
+                                        $120</p>
+
+                                    <p style="display:inline ;font-weight:bold;font-size:20px">4.8</p><br>
+                                    <!---================icons=============-->
+                                    <p style="font-weight:bold;font-size:20px;color:#000000;margin:5px">Taj Deccan</p>
+                                    <p style="display:block;font-size:15px;color:rgb(26, 25, 25)">Hyderabad,Telangana
+                                    </p>
+                                    <!--heart--> <img style=" display:inline;width:25px;height:25px;margin-top:20px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/2961/2961957.png">
+                                    </img>
+                                    <!--cooking--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/7499/7499321.png">
+                                    </img>
+                                    <!--diamond--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/3003/3003952.png">
+                                    </img>
+                                    <!--time--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/3114/3114812.png">
+                                    </img>
+                                    <!--messsage--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/3193/3193015.png">
+                                    </img>
+                                    <button class="btn">Book Now</button>
+                                </div>
+                            </div>
+                        </li>
+                                        <!--===================second======================-->
+                        <li class=" p-5 slid">
+                            <!--room-->
+                            <div class="border shadow-lg" style="height:480px;width:300px;" data-aos="zoom-in"
+                                data-aos-delay="100">
+                                <img style="height:50%;width:100vw;display:inline;margin-bottom:10px;padding:10px;"
+                                    src="https://cf.bstatic.com/xdata/images/hotel/square600/91534215.webp?k=8edfbd3fbb0a4bcbc41fa3f74669c16c68af5d9cae791c2fdff9356550dc1531&o=">
+                                <!--star-->
+                                <div class=" ml-4 "><img style="width:25px;height:25px;display:inline;"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4rLciEXuPwXqV9NPx4kaQpwXciuIpUFH_Og9PZ8TZRw&s">
+                                    </img>
+                                    <p
+                                        style="display:inline;float:right;font-weight:bold;font-size:20px;color:#000000;margin:10px">
+                                        $160</p>
+
+                                    <p style="display:inline ;font-weight:bold;font-size:20px">5</p><br>
+                                    <!---================icons=============-->
+                                    <p style="font-weight:bold;font-size:20px;color:#000000;margin:5px">The Crown Goa</p>
+                                    <p style="display:block;font-size:15px;color:rgb(26, 25, 25)">Panaji,Goa
+                                    </p>
+                                    <!--heart--> <img style=" display:inline;width:25px;height:25px;margin-top:20px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/2961/2961957.png">
+                                    </img>
+                                    <!--cooking--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/7499/7499321.png">
+                                    </img>
+                                    <!--diamond--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/3003/3003952.png">
+                                    </img>
+                                    <!--time--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/3114/3114812.png">
+                                    </img>
+                                    <!--messsage--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/3193/3193015.png">
+                                    </img>
+                                    <button class="btn">Book Now</button>
+                                </div>
+                            </div>
+                        </li>
+                       <!---=======================third=================================-->
+
+                        <li class=" p-5 slid ">
+                            <!--room-->
+                            <div class="border shadow-lg" style="height:480px;width:300px;" data-aos="zoom-in"
+                                data-aos-delay="100">
+                                <img style="height:50%;width:100vw;display:inline;margin-bottom:10px;padding:10px;"
+                                    src="data:image/jpeg;base64,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">
+                                <!--star-->
+                                <div class=" ml-4 "><img style="width:25px;height:25px;display:inline;"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4rLciEXuPwXqV9NPx4kaQpwXciuIpUFH_Og9PZ8TZRw&s">
+                                    </img>
+                                    <p
+                                        style="display:inline;float:right;font-weight:bold;font-size:20px;color:#000000;margin:10px">
+                                        $100</p>
+
+                                    <p style="display:inline ;font-weight:bold;font-size:20px">4</p><br>
+                                    <!---================icons=============-->
+                                    <p style="font-weight:bold;font-size:20px;color:#000000;margin:5px">Sea Sapphire</p>
+                                    <p style="display:block;font-size:15px;color:rgb(26, 25, 25)">Calanguate,Goa
+                                    </p>
+                                    <!--heart--> <img style=" display:inline;width:25px;height:25px;margin-top:20px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/2961/2961957.png">
+                                    </img>
+                                    <!--cooking--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/7499/7499321.png">
+                                    </img>
+                                    <!--diamond--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/3003/3003952.png">
+                                    </img>
+                                    <!--time--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/3114/3114812.png">
+                                    </img>
+                                    <!--messsage--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/3193/3193015.png">
+                                    </img>
+                                    <button class="btn">Book Now</button>
+                                </div>
+                            </div>
+                        </li>
+<!--=========================================FOURTH========================================================-->
+
+                        <li class=" p-5 slid">
+                            <!--room-->
+                            <div class="border shadow-lg" style="height:480px;width:300px;" data-aos="zoom-in"
+                                data-aos-delay="100">
+                                <img style="height:50%;width:100vw;display:inline;margin-bottom:10px;padding:10px;"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbePB5jhELVil1dUtWAOrObqZkGaAGYQMEv1wiZ8RcoE6r8gW-XGEpZUpZ2Uaq3e4RVbw&usqp=CAU">
+                                <!--star-->
+                                <div class=" ml-4 "><img style="width:25px;height:25px;display:inline;"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4rLciEXuPwXqV9NPx4kaQpwXciuIpUFH_Og9PZ8TZRw&s">
+                                    </img>
+                                    <p
+                                        style="display:inline;float:right;font-weight:bold;font-size:20px;color:#000000;margin:10px">
+                                        $120</p>
+
+                                    <p style="display:inline ;font-weight:bold;font-size:20px">4.9</p><br>
+                                    <!---================icons=============-->
+                                    <p style="font-weight:bold;font-size:20px;color:#000000;margin:5px">Cassa In</p>
+                                    <p style="display:block;font-size:15px;color:rgb(26, 25, 25)">North Goa,Goa
+                                    </p>
+                                    <!--heart--> <img style=" display:inline;width:25px;height:25px;margin-top:20px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/2961/2961957.png">
+                                    </img>
+                                    <!--cooking--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/7499/7499321.png">
+                                    </img>
+                                    <!--diamond--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/3003/3003952.png">
+                                    </img>
+                                    <!--time--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/3114/3114812.png">
+                                    </img>
+                                    <!--messsage--> <img
+                                        style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/3193/3193015.png">
+                                    </img>
+                                    <button class="btn">Book Now</button>
+                                </div>
+                            </div>
+                        </li>
+                        <!--====================================FIFTH=========================================-->
+                        <li class=" p-5 slid">
+        <!--room-->                    <div class="border shadow-lg" style="height:480px;width:300px;" data-aos="zoom-in"
+                                data-aos-delay="100">
+                                <img style="height:50%;width:100vw;display:inline;margin-bottom:10px;padding:10px;"
+                                    src="https://w0.peakpx.com/wallpaper/645/468/HD-wallpaper-relax-architecture-house-interior-bedroom-beautiful-villa-sea-beach-modern-graphy-calm-sand-flowers-room-luxury-vacation-exotic-romance-ocean-design-fruit-carving-pool-palms-porch-thumbnail.jpg">
+                     <!--star-->             <div class=" ml-4 "><img style="width:25px;height:25px;display:inline;"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4rLciEXuPwXqV9NPx4kaQpwXciuIpUFH_Og9PZ8TZRw&s">
+                                    </img>
+                                    <p
+                                        style="display:inline;float:right;font-weight:bold;font-size:20px;color:#000000;margin:10px">
+                                        $200</p>
+
+                                    <p style="display:inline ;font-weight:bold;font-size:20px">5</p><br>
+<!---================icons=============-->
+                                    <p style="font-weight:bold;font-size:20px;color:#000000;margin:5px">Grand Hyatt</p>
+                                    <p style="display:block;font-size:15px;color:rgb(26, 25, 25)">Chennai,Tamilnadu
+                                    </p>
+                    <!--heart-->                <img style=" display:inline;width:25px;height:25px;margin-top:20px;"
+                                                               src="https://cdn-icons-png.flaticon.com/128/2961/2961957.png">
+                                    </img>
+                           <!--cooking-->          <img style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                       src="https://cdn-icons-png.flaticon.com/128/7499/7499321.png">
+                                    </img>
+                       <!--diamond-->            <img style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/3003/3003952.png">
+                                    </img>
+                     <!--time-->               <img style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/3114/3114812.png">
+                                    </img>
+                       <!--messsage-->             <img style="display:inline;width:25px;height:25px;margin-top:20px;margin-left:25px;"
+                                        src="https://cdn-icons-png.flaticon.com/128/3193/3193015.png">
+                                    </img>
+                                    <button class="btn">Book Now</button>
+                                </div>
+                            </div>
+                        </li>
+
+
+                     
+                    
+                    
+
+
+
+
+
+                    </ul>
+                </div>
+
+                <div class="w-2/12 flex items-center">
+                    <div class="w-full text-left ">
+                        <button onclick="next()" class="p-3 rounded-full bg-white border border-black-1000">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="w-6 h-6">
+                                <path fill-rule="evenodd"
+                                    d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+            <script>
+                let slidercontainer1 = document.getElementById('slidercontainer1');
+                let slider = document.getElementById('slider');
+                let cards = slider.getElementsByTagName('li');
+                let elementsToShow = 3;
+                let sliderContainerWidth = slidercontainer1.clientWidth;
+              
+                let cardWidth = sliderContainerWidth / elementsToShow;
+                slider.style.width = cards.length * cardWidth + 'px';
+              
+                slider.style.transitionduration = '1s';
+                for (let index = 0; index < cards.length; index++) {
+                  const element = cards[index];
+                  element.style.width = cardWidth + 'px';
+                }
+              
+                function next() {
+                  if (+slider.style.marginLeft.slice(0, -2) > -cardWidth * (cards.length - elementsToShow))
+                    slider.style.marginLeft = ((+slider.style.marginLeft.slice(0, -2)) - cardWidth) + 'px';
+                }
+              
+                function prev() {
+                  if (+slider.style.marginLeft.slice(0, -2) < 0) {
+                    slider.style.marginLeft = ((+slider.style.marginLeft.slice(0, -2)) + cardWidth) + 'px';
+                  }
+                }
+              
+                function updateMiddleCard() {
+                  // Remove "middle-card" class from all cards
+                  for (let i = 0; i < cards.length; i++) {
+                    cards[i].classList.remove('middle-card');
+                  }
+              
+                  // Get the index of the middle card
+                  let middleIndex = Math.floor(elementsToShow / 2) + Math.abs(slider.style.marginLeft.slice(0, -2)) / cardWidth;
+                  middleIndex = Math.floor(middleIndex);
+              
+                  // Add "middle-card" class to the middle card
+                  if (cards[middleIndex]) {
+                    cards[middleIndex].classList.add('middle-card');
+                  }
+                }
+              
+                // Call the updateMiddleCard function on initial load and slide change
+                updateMiddleCard();
+                slider.addEventListener('transitionend', updateMiddleCard);
+              </script>
+    </div>
+
+    </section>
+    </div>
+
+   
+
+
 
     <div class="frame ">
-        
-      
+
+
         <div class="frame-70">
-          <img class="rectangle" src="https://wallpapercave.com/wp/wp3598837.jpg" />
-      
-          <img class="rectangle2" src="https://th.bing.com/th/id/R.bbc00bfeab1e94cc92e4097dab6a6a5a?rik=q0lTTx%2fXE2eXZQ&riu=http%3a%2f%2fpix10.agoda.net%2fhotelImages%2f773%2f773169%2f773169_15092917470036504230.jpg%3fs%3d1024x768&ehk=5Q%2bXpwBEHrj8Swpo3NcvZXh2wMmi5pcOiahS3FNgTJU%3d&risl=&pid=ImgRaw&r=0" />
-      
-          
-      
-          <div class="auto-layout-vertical4">
-            <div class="frame2">
-              <div class="hostels">HOSTELS</div>
-              <button class="custom-button">Visit Now</button>
+            <img class="rectangle" src="https://wallpapercave.com/wp/wp3598837.jpg" />
+
+            <img class="rectangle2"
+                src="https://th.bing.com/th/id/R.bbc00bfeab1e94cc92e4097dab6a6a5a?rik=q0lTTx%2fXE2eXZQ&riu=http%3a%2f%2fpix10.agoda.net%2fhotelImages%2f773%2f773169%2f773169_15092917470036504230.jpg%3fs%3d1024x768&ehk=5Q%2bXpwBEHrj8Swpo3NcvZXh2wMmi5pcOiahS3FNgTJU%3d&risl=&pid=ImgRaw&r=0" />
+
+
+
+            <div class="auto-layout-vertical4">
+                <div class="frame2">
+                    <div class="hostels">HOSTELS</div>
+                    <button class="custom-button">Visit Now</button>
+                </div>
             </div>
-          </div>
-      
-      
-          <img class="rectangle3" src="https://th.bing.com/th/id/R.305861f49adc41a3c4d20d8c03e26acb?rik=vieGJlu7K0NOgg&riu=http%3a%2f%2fpix4.agoda.net%2fhotelImages%2f734%2f73414%2f73414_14021819140018380572.jpg%3fs%3d1100x825&ehk=FG1dTKmYzmp%2fXT4tQSuYhNkE5FPackV4JibFsfzEUH0%3d&risl=&pid=ImgRaw&r=0" />
-      
-          <div class="our-most-popular-facilities-lovedby-all">
-            <span
-              ><span class="our-most-popular-facilities-lovedby-all-span">Our </span
-              ><span class="our-most-popular-facilities-lovedby-all-span2">Most</span
-              ><span class="our-most-popular-facilities-lovedby-all-span3"> </span
-              ><span class="our-most-popular-facilities-lovedby-all-span4"
-                >Popular <br /></span
-              ><span class="our-most-popular-facilities-lovedby-all-span5"
-                >Facilities Lovedby All</span
-              ></span
-            >
-          </div>
-      <div calss="frame-3"> <div class="hotels">HOTELS</div>
-      <button class="custom-button2 ">Visit Now</button>
-          
-     </div>
-          
-      
-          <div
-            class="discover-unparalleled-comfort-and-impeccable-service-at-our-exquisite-hotel-where-every-stay-is-a-memorable-experience"
-          >
-            Discover unparalleled comfort and impeccable service at our exquisite
-            hotel, where every stay is a memorable experience.
-          </div>
-      
-      
-          <div
-            class="experience-budget-friendly-and-vibrant-community-at-our-lively-hostel-where-travelers-become-friends"
-          >
-            Experience budget-friendly and vibrant community at our lively hostel,
-            where travelers become friends.
-          </div>
-      
-          <div class="frame-190">
+
+
+            <img class="rectangle3"
+                src="https://th.bing.com/th/id/R.305861f49adc41a3c4d20d8c03e26acb?rik=vieGJlu7K0NOgg&riu=http%3a%2f%2fpix4.agoda.net%2fhotelImages%2f734%2f73414%2f73414_14021819140018380572.jpg%3fs%3d1100x825&ehk=FG1dTKmYzmp%2fXT4tQSuYhNkE5FPackV4JibFsfzEUH0%3d&risl=&pid=ImgRaw&r=0" />
+
+            <div class="our-most-popular-facilities-lovedby-all">
+                <span><span class="our-most-popular-facilities-lovedby-all-span">Our </span><span
+                        class="our-most-popular-facilities-lovedby-all-span2">Most</span><span
+                        class="our-most-popular-facilities-lovedby-all-span3"> </span><span
+                        class="our-most-popular-facilities-lovedby-all-span4">Popular <br /></span><span
+                        class="our-most-popular-facilities-lovedby-all-span5">Facilities Lovedby All</span></span>
+            </div>
+            <div calss="frame-3">
+                <div class="hotels">HOTELS</div>
+                <button class="custom-button2 ">Visit Now</button>
+
+            </div>
+
+
             <div
-              class="escape-to-paradise-at-our-luxurious-resort-where-serenity-meets-indulgence"
-            >
-              Escape to paradise at our luxurious resort, where serenity meets
-              indulgence.
+                class="discover-unparalleled-comfort-and-impeccable-service-at-our-exquisite-hotel-where-every-stay-is-a-memorable-experience">
+                Discover unparalleled comfort and impeccable service at our exquisite
+                hotel, where every stay is a memorable experience.
             </div>
-      
-            <div class="resorts">RESORTS</div>
-            <button class="custom-button1 ">Visit Now</button>
-      
-            
-          </div>
+
+
+            <div
+                class="experience-budget-friendly-and-vibrant-community-at-our-lively-hostel-where-travelers-become-friends">
+                Experience budget-friendly and vibrant community at our lively hostel,
+                where travelers become friends.
+            </div>
+
+            <div class="frame-190">
+                <div class="escape-to-paradise-at-our-luxurious-resort-where-serenity-meets-indulgence">
+                    Escape to paradise at our luxurious resort, where serenity meets
+                    indulgence.
+                </div>
+
+                <div class="resorts">RESORTS</div>
+                <button class="custom-button1 ">Visit Now</button>
+
+
+            </div>
         </div>
-      </div>
     </div>
-      
+    </div>
+
+    <!--slider section-->
+
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
         <div class="container" data-aos="fade-up">
@@ -351,6 +703,7 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+   
 
 
 </body>
