@@ -314,6 +314,7 @@ p {
   
   .ec {
     flex: 1;
+    text-align: left;
   }
   .st{
     margin-right:30px;
@@ -347,7 +348,13 @@ color: #000000;
     transition: opacity 0.15s ease;
     top: calc(50% - 25px);
   }
-
+  .section-title1 .frame-131:hover .text-bold,
+  .section-title1 .frame-131:hover .toyota-innova,
+  .section-title1 .frame-131:hover .text-grey {
+    color: blue;
+    font-weight: bold;
+  }
+  
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
     background-image: none;
