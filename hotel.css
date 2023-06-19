@@ -158,10 +158,13 @@
   .frame,
 .frame * {
   box-sizing: border-box;
+  
+  
 }
+
 .frame {
   background: rgba(196, 196, 196, 0.18);
-  width: 1441px;
+  width: full;
   height: 1104px;
   position: relative;
 }
@@ -435,12 +438,15 @@
   position: relative;
 }
 .hostels {
-  color: #106eea;
+  color: gray;
   text-align: left;
   font: 800 31px "Inter", sans-serif;
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 10px;
+  top: -10px;
+}
+.hostels:hover{
+  color:blue;
 }
 .visit-now {
   color: #ffffff;
@@ -484,29 +490,18 @@
   color: #000000;
   font: 700 48px "Inter", sans-serif;
 }
-.visit-now2 {
-  color: #ffffff;
-  text-align: center;
-  font: 700 19.9px "Inter", sans-serif;
-  position: absolute;
-  left: 466px;
-  top: 732px;
-}
-.visit-now3 {
-  color: #ffffff;
-  text-align: center;
-  font: 700 17px "Inter", sans-serif;
-  position: absolute;
-  left: 1127px;
-  top: 327px;
-}
+
+
 .hotels {
-  color: #5292e9;
+  color: grey;
   text-align: left;
   font: 800 31px "Inter", sans-serif;
   position: absolute;
   left: 745px;
   top: 318px;
+}
+.hotels:hover{
+  color: blue;
 }
 .discover-unparalleled-comfort-and-impeccable-service-at-our-exquisite-hotel-where-every-stay-is-a-memorable-experience {
   color: #000000;
@@ -517,14 +512,7 @@
   top: 367px;
   width: 359px;
 }
-.visit-now4 {
-  color: #ffffff;
-  text-align: center;
-  font: 700 17px "Inter", sans-serif;
-  position: absolute;
-  left: 1127px;
-  top: 830px;
-}
+
 .experience-budget-friendly-and-vibrant-community-at-our-lively-hostel-where-travelers-become-friends {
   color: #000000;
   text-align: center;
@@ -547,17 +535,18 @@
   font: 400 27px "Inter", sans-serif;
   position: absolute;
   left: 3px;
-  top: 74px;
+  top: 64px;
   width: 392px;
 }
 .resorts {
-  color: #106eea;
+  color: blue;
   text-align: left;
   font: 800 48px "Inter", sans-serif;
   position: absolute;
   left: 0px;
-  top: -5px;
+  top: -25px;
 }
+
 .frame-71 {
   width: 185px;
   height: 60px;
@@ -565,20 +554,66 @@
   left: 395px;
   top: 0px;
 }
-.rectangle-13 {
-  background: #5292e9;
-  border-radius: 20px;
-  width: 185px;
-  height: 60px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
+
+
+
+.custom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-left:370px;
+width:130px;
 }
-.visit-now5 {
-  color: #ffffff;
-  text-align: center;
-  font: 700 24px "Inter", sans-serif;
-  position: absolute;
-  left: 36px;
-  top: 14px;
+
+.custom-button:hover {
+  background-color: white;
+  color: blue;
+  cursor: pointer;
+}
+
+
+.custom-button1 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  
+width:130px;
+position: absolute;
+  left: 450px;
+  top: 5px;
+}
+
+.custom-button1:hover {
+  background-color: white;
+  color: blue;
+  cursor: pointer;
+}
+
+.custom-button2 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  
+width:130px;
+position: absolute;
+  left: 85%;
+  top: 35%;
+}
+
+.custom-button2:hover {
+  background-color: white;
+  color: blue;
+  cursor: pointer;
 }
