@@ -1,0 +1,94 @@
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+#hero {
+    width: 100%;
+    height: 90vh;
+    background: url("https://cdn.openpr.com/T/3/T331482508_g.jpg") top left;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 20px;;
+}
+#hero h2{
+    margin-left:30px;
+font-size:25px;font-weight: bold; padding: 20px 0px 10px 0px;color:#000000;
+}
+
+.booknow{
+font-family: "Roboto", sans-serif;
+text-transform: uppercase;
+font-weight: 500;
+font-size: 14px;
+letter-spacing: 1px;
+display: inline-block;
+padding: 10px 28px;
+border-radius: 4px;
+transition: 0.5s;
+color: #fff;
+background: #106eea;;
+margin-left:30px;
+}
+#hero h1{
+    color:#fff;
+    margin-left:30px;
+}
+#hero h1 span{
+    color:#106eea;
+}
+#title h3{
+    font-size:44px;text-align:center;font-weight:bold;padding:20px;
+
+}
+#title h3 span{
+    color:#106eea;
+    margin-top:40px;
+}
+#cards{
+    margin-left:100px;
+}
+.btn-cards {
+position: absolute;
+    background: #001324;
+  background-image: -webkit-linear-gradient(top, #001324, #001324);
+  background-image: -moz-linear-gradient(top, #001324, #001324);
+  background-image: -ms-linear-gradient(top, #001324, #001324);
+  background-image: -o-linear-gradient(top, #001324, #001324);
+  background-image: linear-gradient(to bottom, #001324, #001324);
+  -webkit-border-radius: 80;
+  -moz-border-radius: 80;
+  border-radius: 80px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 11px 32px 11px 32px;
+  text-decoration: none;
+  display: flex;
+
+    
+  }
+  
+  .btn-cards:hover {
+    background: #106eea;
+    background-image: -webkit-linear-gradient(top, #106eea, #106eea);
+    background-image: -moz-linear-gradient(top, #106eea, #106eea);
+    background-image: -ms-linear-gradient(top, #106eea, #106eea);
+    background-image: -o-linear-gradient(top, #106eea, #106eea);
+    background-image: linear-gradient(to bottom, #106eea, #106eea);
+    text-decoration: none;
+  }
+  .price:hover{
+    color:#106eea;
+  }
+  .heading:hover{
+    color: #106eea;
+
+  }
+  #testimonals{
+  width: 100%;
+    height: 90vh;
+    background: url('https://images.pexels.com/photos/3098970/pexels-photo-3098970.jpeg?cs=srgb&dl=pexels-ma%C3%ABl-balland-3098970.jpg&fm=jpg') ;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 20px;
+}
