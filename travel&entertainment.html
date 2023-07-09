@@ -13,6 +13,7 @@
 
 
 
+
     <title>Ronny Ferns Travel</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <meta content="" name="description">
@@ -40,7 +41,116 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style1.css">
     <link rel="stylesheet" href="assets/css/travel&entertainment.css">
+<style>
+    .card-container {
+      margin-top:50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding: 0 20px;
+    }
 
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      width: calc(25% - 30px);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card-image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .card-details {
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .card-line {
+      width: 100%;
+      height: 1px;
+      background-color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .card-icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    .card-icon img {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 5px;
+    }
+
+    .card-total {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+      margin-top:10px;
+      color: #106eea;
+    }
+
+    .card-image-container {
+      position: relative;
+      margin-top: 10px;
+    }
+
+    .card-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      background-color:white;
+      color: #106eea;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .card-image-container:hover .card-button {
+      opacity: 1;
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 1200px) {
+      .card {
+        width: calc(33.33% - 30px);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .card {
+        width: calc(50% - 30px);
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .card {
+        width: calc(100% - 30px);
+      }
+    }
+</style>
 </head>
 
 <body>
@@ -142,184 +252,672 @@
             </div>
 
         </div>
-    </section><!-- End Services Section -->
+    </section>
 
-    <!--car container ends-->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
 
-    <div class="section-title1">
-        <div class="container" data-aos="fade-up">
+          <div class="section-title1">
 
-        <h3 style="font-size:44px;">Our Latest <span>Car Deals</span></h3>
+              <h3 style="font-size:44px;">Our Latest <span>Car Fleets</span></h3>
+          </div>
     
 
-
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <!-- First and Second cards -->
-          <div class="carousel-item active">
-            <div class="row">
-              <div class="col-md-6 ">
-                <div class="frame-131 mb-4 mx-12 mt-4">
-                  <div class="row-container ">
-              <div class="ec pt-4 pl-4">
-                Economy 
-                <br>
-                <div class="text-grey">4-5 Doors</div>
-              </div>
-              <div class=" pt-4 st ">
-                Starts  From <b class="text-bold">3500</b>
-                <div class="text-blue pr">PER DAY</div>
-              </div>
+    <div class="card-container">
+        <!-- Cards go here -->
+    
+        <!-- First Row -->
+        <div class="card">
+          <h2 class="card-title">Toyota<br> Glanza Automatic</h2>
+          <div class="card-image-container">
+            <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2023/02/car-maroon.png" alt="Card Image 1">
+            <button class="card-button">Book</button>
+          </div>
+          <p class="card-details"></p>
+          <hr class="card-line">
+          <div class="card-icons">
+            <div class="card-icon">
+              <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+              <span>Petrol</span>
             </div>
-            <img class="ellipse-19" src="https://cdn.onlinewebfonts.com/svg/img_156330.png" />
-            <div class="ellipse-20"></div>
-            <img class="image-59" src="https://th.bing.com/th/id/OIP.Lf0N83pJS8nPQ9xTpZGwBQHaIB?pid=ImgDet&rs=1" />
-            <div class="_4-seats">4 Seats</div>
-            <div class="_2-bags">2 Bags</div>
-            <img class="frame-140" src="https://stat.overdrive.in/wp-content/odgallery/2017/05/35181_Toyota_Innova_-TouringSport.jpg" />
-            <div class="toyota-innova">Toyota Innova</div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="frame-131 mb-4 mx-6 mt-4">
-                  <div class="row-container">
-              <div class="ec pt-4 pl-4">
-                Mini 
-                <br>
-                <div class="text-grey">4-5 Doors</div>
-              </div>
-              <div class=" pt-4 st ">
-                Starts  From <b class="text-bold">3000</b>
-                <div class="text-blue pr">PER DAY</div>
-              </div>
+            <div class="card-icon">
+              <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+              <span>Automatic</span>
             </div>
-            <img class="ellipse-19" src="https://cdn.onlinewebfonts.com/svg/img_156330.png" />
-            <div class="ellipse-20"></div>
-            <img class="image-59" src="https://th.bing.com/th/id/OIP.Lf0N83pJS8nPQ9xTpZGwBQHaIB?pid=ImgDet&rs=1" />
-            <div class="_4-seats">4 Seats</div>
-            <div class="_2-bags">2 Bags</div>
-            <img class="frame-140" src="https://imgd.aeplcdn.com/0x0/cw/ec/26860/Maruti-Suzuki-New-Dzire-Right-Front-Three-Quarter-96747.jpg?v=201711021421" />
-            <div class="toyota-innova">Suzuki Dzire</div>
-                </div>
-              </div>
+            <div class="card-icon">
+              <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+              <span>5 Seats</span>
+            </div>
+            <div class="card-icon">
+              <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+              <span>Airbags</span>
             </div>
           </div>
-      
-          <!-- Third and Fourth cards -->
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="frame-131 mb-4 mx-6 mt-4">
-                  <div class="row-container">
-              <div class="ec pt-4 pl-4">
-                Compact
-
-                <br>
-                <div class="text-grey">3-4 Doors</div>
-              </div>
-              <div class=" pt-4 st ">
-                Starts  From <b class="text-bold">3000</b>
-                <div class="text-blue pr">PER DAY</div>
-              </div>
-            </div>
-            <img class="ellipse-19" src="https://cdn.onlinewebfonts.com/svg/img_156330.png" />
-            <div class="ellipse-20"></div>
-            <img class="image-59" src="https://th.bing.com/th/id/OIP.Lf0N83pJS8nPQ9xTpZGwBQHaIB?pid=ImgDet&rs=1" />
-            <div class="_4-seats">4 Seats</div>
-            <div class="_2-bags">2 Bags</div>
-            <img class="frame-140" src="https://images.hgmsites.net/lrg/2021-hyundai-accent-se-sedan-ivt-angular-front-exterior-view_100764408_l.jpg" />
-            <div class="toyota-innova">Hyndai Accent</div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="frame-131 mb-4 mx-6 mt-4">
-                  <div class="row-container">
-              <div class="ec pt-4 pl-4">
-                 Fullsize
-                <br>
-                <div class="text-grey">2-3 Doors</div>
-              </div>
-              <div class=" pt-4 st ">
-                Starts  From <b class="text-bold">5500</b>
-                <div class="text-blue pr">PER DAY</div>
-              </div>
-            </div>
-            <img class="ellipse-19" src="https://cdn.onlinewebfonts.com/svg/img_156330.png" />
-            <div class="ellipse-20"></div>
-            <img class="image-59" src="https://th.bing.com/th/id/OIP.Lf0N83pJS8nPQ9xTpZGwBQHaIB?pid=ImgDet&rs=1" />
-            <div class="_4-seats">12Seats</div>
-            <div class="_2-bags">2 Bags</div>
-            <img class="frame-140" src="https://www.jcrcab.com/wp-content/uploads/2020/07/Force-Tempo-Traveller-non-ac-1250x917.jpg" />
-            <div class="toyota-innova">Tempo Traveller</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Fifth and Sixth cards -->
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="frame-131 mb-4 mx-6 mt-4">
-                  <div class="row-container">
-              <div class="ec pt-4 pl-4">
-                Intermediate
-                <br>
-                <div class="text-grey">4-5 Doors</div>
-              </div>
-              <div class=" pt-4 st ">
-                Starts  From <b class="text-bold">5000</b>
-                <div class="text-blue pr">PER DAY</div>
-              </div>
-            </div>
-            <img class="ellipse-19" src="https://cdn.onlinewebfonts.com/svg/img_156330.png" />
-            <div class="ellipse-20"></div>
-            <img class="image-59" src="https://th.bing.com/th/id/OIP.Lf0N83pJS8nPQ9xTpZGwBQHaIB?pid=ImgDet&rs=1" />
-            <div class="_4-seats">6 Seats</div>
-            <div class="_2-bags">4 Bags</div>
-            <img class="frame-140" src="https://images.netdirector.co.uk/gforces-auto/image/upload/q_auto,c_crop,f_auto,fl_lossy,x_59,y_31,w_675,h_380/w_375,h_211,c_fill/auto-client/a8b9c07fe19620f5fe736239af38dc99/renault_trafic_sl30_start_web_offer.jpg" />
-            <div class="toyota-innova">Renault Traffic</div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="frame-131 mb-4 mx-6 mt-4">
-                  <div class="row-container">
-              <div class="ec pt-4 pl-4">
-                Premium
-                <br>
-                <div class="text-grey">4-5 Doors</div>
-              </div>
-              <div class=" pt-4 st ">
-                Starts  From <b class="text-bold">15000</b>
-                <div class="text-blue pr">PER DAY</div>
-              </div>
-            </div>
-            <img class="ellipse-19" src="https://cdn.onlinewebfonts.com/svg/img_156330.png" />
-            <div class="ellipse-20"></div>
-            <img class="image-59" src="https://th.bing.com/th/id/OIP.Lf0N83pJS8nPQ9xTpZGwBQHaIB?pid=ImgDet&rs=1" />
-            <div class="_4-seats">5 Seats</div>
-            <div class="_2-bags">4 Bags</div>
-            <img class="frame-140" src="https://imgd.aeplcdn.com/664x374/n/cw/ec/96443/5-series-exterior-right-front-three-quarter-4.jpeg" />
-            <div class="toyota-innova">BMW 5 Series</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <p class="card-total">Starting From Rs. 1500/-</p>
         </div>
-      
-        <!-- Carousel controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
+    
+        <div class="card">
+            <h2 class="card-title">Toyota<br>
+                Innova Crysta Automatic</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2022/08/Toyota-innova-crysta-350x215.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>7 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 3000/-</p>
+          </div>
+    
+          <div class="card">
+            <h2 class="card-title">Hyundai<br>
+                New Venue Automatic</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2022/08/hyundai-venue-3000-350x215.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>5 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 3000/-</p>
+          </div>
+    
+          <div class="card">
+            <h2 class="card-title">Mahindra<br>
+              New Thar Automatic</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2022/08/Mahindra-thar-auto-5000-RedRage-350x215.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>4 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 3500/-</p>
+          </div>
+    
+        <!-- Add three more cards for the first row -->
+    
+        <!-- Second Row -->
+        <div class="card">
+          <h2 class="card-title">Hyundai I10 <br>
+            Grand Automatic NIOS</h2>
+          <div class="card-image-container">
+            <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2021/11/hyundai_grandi10nios_concept-1-350x215.jpg" alt="Card Image 5">
+            <button class="card-button">Book</button>
+          </div>
+          <p class="card-details"></p>
+          <hr class="card-line">
+          <div class="card-icons">
+            <div class="card-icon">
+              <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+              <span>Petrol</span>
+            </div>
+            <div class="card-icon">
+              <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+              <span>Automatic</span>
+            </div>
+            <div class="card-icon">
+              <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+              <span>5 Seats</span>
+            </div>
+            <div class="card-icon">
+              <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+              <span>Airbags</span>
+            </div>
+          </div>
+          <p class="card-total">Starting From Rs. 1500/-</p>
+        </div>
+    
+        <div class="card">
+            <h2 class="card-title">Hyundai <br>
+              Venue Automatic</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2021/11/front-left-side-47-350x215.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>5 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 2200/-</p>
+          </div>
+    
+          <div class="card">
+            <h2 class="card-title">Maruti Suzuki<br>
+              Swift Automatic</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2021/04/swiftauto-350x215.png" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>5 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 1300/-</p>
+          </div>
+    
+          <div class="card">
+            <h2 class="card-title">Toyota<br>
+              Fortuner</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2020/12/IMG-20201204-WA0005-350x215.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>5 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 6000/-</p>
+          </div>
+    
+        <!-- Add three more cards for the second row -->
+    
+        <!-- Third Row -->
+        <div class="card">
+          <h2 class="card-title">Hyundai<br>
+            Creta Automatic
+            </h2>
+          <div class="card-image-container">
+            <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2019/10/hyundai-creta_600x400-e1571733492595-350x215.jpg" alt="Card Image 9">
+            <button class="card-button">Book</button>
+          </div>
+          <p class="card-details"></p>
+          <hr class="card-line">
+          <div class="card-icons">
+            <div class="card-icon">
+              <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+              <span>Petrol</span>
+            </div>
+            <div class="card-icon">
+              <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+              <span>Automatic</span>
+            </div>
+            <div class="card-icon">
+              <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+              <span>5 Seats</span>
+            </div>
+            <div class="card-icon">
+              <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+              <span>Airbags</span>
+            </div>
+          </div>
+          <p class="card-total">Starting From Rs. 2200/-</p>
+        </div>
+    
+          <div class="card">
+            <h2 class="card-title">Maruti Suzuki<br>
+              Ertiga</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2018/12/ertiga-350x215.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>7 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 1800/-</p>
+          </div>
+    
+          <div class="card">
+            <h2 class="card-title">Hyundai<br>
+              I10 Grand Automatic</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2017/09/i10grand-1.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>5 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 1300/-</p>
+          </div>
+    
+          <div class="card">
+            <h2 class="card-title">Ford<br>
+              Ecosport Automatic</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2017/10/Ford-EcoSport-Right-Front-Three-Quarter-159249.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>5 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 2500/-</p>
+          </div>
 
+          <div class="card">
+            <h2 class="card-title">Maruti Suzuki <br>
+              Wagon R</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2017/10/maruti-suzuki-wagonr-1.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>5 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 900/-</p>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">Maruti Suzuki <br>
+              Baleno</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2017/09/baleno.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>5 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 1300/-</p>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">Hyundai<br>
+              I20 Elite</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2017/09/i20-elite.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>5 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 1300/-</p>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">Hyundai<br>
+              I10 Grand</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2017/09/i10grand-1.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>5 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 1000/-</p>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">Hyundai<br>
+              i10</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2017/09/i10.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>5 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 900/-</p>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">Hyundai<br>
+              Creta</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2017/09/creta.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>5 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 1800/-</p>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">Toyata<br>
+              Innova Crysta</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2017/09/innova-crysta.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>8 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 2500/-</p>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">Toyata<br>
+              Innova</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2017/09/innova.jpg" alt="Card Image 1">
+              <button class="card-button">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>8 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 2000/-</p>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">Maruti Suzuki<br>
+              Swift</h2>
+            <div class="card-image-container">
+              <img class="card-image" src="https://joecarrentals.com/wp-content/uploads/2017/09/swift.jpg" alt="Card Image 1">
+        <button class="card-button" onclick="sendWhatsApp('maruti suzuki Swift of price 1100')">Book</button>
+            </div>
+            <p class="card-details"></p>
+            <hr class="card-line">
+            <div class="card-icons">
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/fuel.png" alt="Petrol Cars">
+                <span>Petrol</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/manual.png" alt="Automatic Car Driving">
+                <span>Automatic</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/seat.png" alt="Seats">
+                <span>5 Seats</span>
+              </div>
+              <div class="card-icon">
+                <img src="http://joecarrentals.com/wp-content/themes/joecarrentals/images/airbag.png" alt="Airbags">
+                <span>Airbags</span>
+              </div>
+            </div>
+            <p class="card-total">Starting From Rs. 1100/-</p>
+          </div>
     </div>
+</div>    
+
+</div>
+</section>
+
+<script>
+  function sendWhatsApp(carName) {
+    var phoneNumber = "9121945249"; // Replace with your WhatsApp number
+    var message = "I'm interested in booking the car: " + carName;
+
+    var whatsappLink = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodeURIComponent(message);
+
+    window.open(whatsappLink);
+  }
+</script>
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
