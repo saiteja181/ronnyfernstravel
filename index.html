@@ -39,6 +39,7 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -80,6 +81,25 @@
 }
 
 
+  </style>
+  <style>
+    .faq-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .question {
+      font-weight: bold;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .answer {
+      display: none;
+      padding: 10px;
+      background-color: #f5f5f5;
+    }
   </style>
 
 
@@ -492,76 +512,47 @@
       <div class="row justify-content-center">
         <div class="col-xl-10">
           <ul class="faq-list">
-
             <li>
-              <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">What services does Ronny Ferns
-                Travel and Entertainment offer? <i class="bi bi-chevron-down icon-show"></i><i
-                  class="bi bi-chevron-up icon-close"></i></div>
-              <div id="faq1" class="collapse answer" data-bs-parent=".faq-list">
-                <p>
-                  Ronny Ferns Travel and Entertainment offers a wide range of services including flight bookings, hotel
-                  reservations, car rentals, tour packages, event ticketing, and travel insurance.
-                </p>
-              </div>
+              <div class="question" onclick="toggleAnswer('faq1')">What services does Ronny Ferns Travel and Entertainment offer?</div>
+              <div id="faq1" class="answer">Ronny Ferns Travel and Entertainment offers a wide range of services including flight bookings, hotel reservations, tour packages, travel insurance, and more.</div>
             </li>
-
+        
             <li>
-              <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">How can I book a flight with Ronny
-                Ferns Travel and Entertainment? <i class="bi bi-chevron-down icon-show"></i><i
-                  class="bi bi-chevron-up icon-close"></i></div>
-              <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  You can book a flight with Ronny Ferns Travel and Entertainment online through their website, by
-                  phone, or in-person at one of their offices. Simply select your desired destination and travel dates,
-                  and choose from the available flights and airlines.
-                </p>
-              </div>
+              <div class="question" onclick="toggleAnswer('faq2')">How can I book a flight with Ronny Ferns Travel and Entertainment?</div>
+              <div id="faq2" class="answer">You can book a flight with Ronny Ferns Travel and Entertainment online through their website, by phone, or in-person at one of their offices. Simply select your desired destination and travel dates, and follow the instructions to complete your booking.</div>
             </li>
-
+        
             <li>
-              <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Does Ronny Ferns Travel and
-                Entertainment offer travel insurance? <i class="bi bi-chevron-down icon-show"></i><i
-                  class="bi bi-chevron-up icon-close"></i></div>
-              <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Yes, Ronny Ferns Travel and Entertainment offers travel insurance to protect against unexpected events
-                  such as trip cancellation, medical emergencies, lost luggage, and more. They offer a range of
-                  insurance options to suit different needs and budgets.
-                </p>
-              </div>
+              <div class="question" onclick="toggleAnswer('faq3')">Does Ronny Ferns Travel and Entertainment offer travel insurance?</div>
+              <div id="faq3" class="answer">Yes, Ronny Ferns Travel and Entertainment offers travel insurance to protect against unforeseen circumstances such as trip cancellations, medical emergencies, and lost luggage. You can purchase travel insurance when booking your trip or separately.</div>
             </li>
-
+        
             <li>
-              <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Can I customize a tour package with
-                Ronny Ferns Travel and Entertainment? <i class="bi bi-chevron-down icon-show"></i><i
-                  class="bi bi-chevron-up icon-close"></i></div>
-              <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Yes, Ronny Ferns Travel and Entertainment offers customizable tour packages to suit individual
-                  preferences and budgets. You can choose from a variety of destinations, activities, and accommodations
-                  to create your ideal itinerary.
-                </p>
-              </div>
+              <div class="question" onclick="toggleAnswer('faq4')">Can I customize a tour package with Ronny Ferns Travel and Entertainment?</div>
+              <div id="faq4" class="answer">Yes, Ronny Ferns Travel and Entertainment offers customizable tour packages. You can work with their travel experts to tailor the itinerary, accommodations, activities, and other details according to your preferences and requirements.</div>
             </li>
-
-            <li>
-              <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">How can I cancel or modify my
-                booking with Ronny Ferns Travel and Entertainment? <i class="bi bi-chevron-down icon-show"></i><i
-                  class="bi bi-chevron-up icon-close"></i></div>
-              <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  If you need to cancel or modify your booking with Ronny Ferns Travel and Entertainment, you can do so
-                  by contacting their customer service team via phone or email. Depending on the terms and conditions of
-                  your booking, there may be fees or restrictions involved.
-                </p>
-              </div>
-            </li>
-
+        
+            <!-- Add more question-answer pairs as needed -->
           </ul>
+        
+         <!-- Include Bootstrap JavaScript -->
+          <script ... src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+          <script>
+            function toggleAnswer(faqId) {
+              var answerElement = document.getElementById(faqId);
+              if (answerElement.style.display === 'none') {
+                answerElement.style.display = 'block';
+              } else {
+                answerElement.style.display = 'none';
+              }
+            }
+          </script>
         </div>
       </div>
 
       </div>
+      
     </section><!-- End Frequently Asked Questions Section -->
 
     <!-- ======= Contact Section ======= -->
