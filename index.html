@@ -16,6 +16,24 @@
   <script src="https://kit.fontawesome.com/c91086cdad.js" crossorigin="anonymous"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  fontFamily: {
+                      inter: ['Inter', 'sans-serif'],
+                  },
+              },
+          },
+      };
+  </script>
+
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -30,6 +48,39 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+  /* Testimonial Rating */
+.testimonial-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.testimonial-stars {
+  display: inline-block;
+  width: auto;
+  height: 20px; /* Adjust the height based on the size of your star icons */
+}
+
+.testimonial-stars span {
+  display: inline-block;
+  width: 20px; /* Adjust the width based on the size of your star icons */
+  height: 20px; /* Adjust the height based on the size of your star icons */
+  background-image: url(https://cdn-icons-png.flaticon.com/128/477/477406.png); /* Replace with the path to your star icons */
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.testimonial-rating-text {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white; /* Adjust the color to your preference */
+}
+
+
+  </style>
 
 
 </head>
@@ -51,8 +102,6 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -218,15 +267,15 @@
         <div class="row">
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+            <img src="https://th.bing.com/th/id/R.11b3b5500b837e7f1ff41a3a1c30a324?rik=zcKyhBAQEipRuQ&riu=http%3a%2f%2falt.ayurvedacongress.eu%2fwp-content%2fuploads%2fewac-logo-square-300dpi.png&ehk=iLhceY5etwuwT4OAHeB%2b89SEbtbIscQ98cs2dje3%2f8g%3d&risl=&pid=ImgRaw&r=0" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+            <img src="data:image/png;base64,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" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+            <img src="https://scontent.fhyd14-1.fna.fbcdn.net/v/t39.30808-6/301146398_473282051482727_3600673168655921588_n.png?_nc_cat=111&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=oEqzPVhKgLcAX_57mL-&_nc_ht=scontent.fhyd14-1.fna&oh=00_AfDDtSkr0AmLP-WkfyvXM8hRRDQWiOzX1fawPAJUF2wuLQ&oe=64FB173C" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
@@ -256,45 +305,20 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><img
-                  src="https://images.sampleforms.com/wp-content/uploads/2019/12/Travel-Booking-Form.jpg" class=""
-                  alt=""></div>
-              <h4 class=""><a href="">Travel Planning and Bookings</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
-            data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon event"><img src="assets/img/event.png" class="" alt=""></div>
-              <h4><a href="">Event Planning</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
+          
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
             data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><img
-                  src="https://goaadventure.in/wp-content/uploads/2020/12/Parasailing-goa-water-sports.jpg" class="trans"
-                  alt=""></div>
+                  src="https://goaadventure.in/wp-content/uploads/2020/12/Parasailing-goa-water-sports.jpg"
+                  class="trans" alt=""></div>
               <h4><a href="entertainment.html">Entertainment and Activities</a></h4>
               <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><img
-                  src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/01/28140058/shutterstock_631852175.jpg"
-                  class="" alt=""></div>
-              <h4><a href="">Beach Weddings </a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div>
+          
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
@@ -322,436 +346,136 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-      <div class="container" data-aos="zoom-in">
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/team/team-1.jpg" class="testimonial-img" alt="">
-                <h3>Denin Kallachiyil</h3>
-                <h4> Founder of DB Federation,Bengaluru</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Ronny Ferns Travel and Entertainment is simply the best in the business. Their attention to detail is
-                  unmatched, and they go above and beyond to ensure that every aspect of your trip is perfect. I've used
-                  their services several times now and have never been disappointed.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/team/team-2.jpg" class="testimonial-img" alt="">
-                <h3>Kathan Shah</h3>
-                <h4>Founder & CEO - Spurge IT Services Pvt Ltd.</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  I recently booked a trip through Ronny Ferns Travel and Entertainment and was blown away by their
-                  level of service. From the initial booking to the final details, they took care of everything and made
-                  sure that I had a truly unforgettable experience. I highly recommend them to anyone looking for a
-                  seamless and stress-free travel experience
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/team/team-3.jpg" class="testimonial-img" alt="">
-                <h3>Shivam Malpani</h3>
-                <h4>Student Placement Coordinator</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Ronny Ferns Travel and Entertainment exceeded my expectations in every way. Their team is
-                  knowledgeable, professional, and incredibly friendly, and they really know how to make their clients
-                  feel special. I will definitely be using their services again in the future
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/team/team-4.jpg" class="testimonial-img" alt="">
-                <h3>Jeeshan Kholi</h3>
-                <h4>Head of sales enterprise at Intugine Technologies Pvt Ltd</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  i can't say enough good things about Ronny Ferns Travel and Entertainment. They are true experts in
-                  their field and are committed to delivering exceptional service every time. If you're looking for a
-                  travel company that will go above and beyond, look no further than Ronny Ferns
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-
+    <main class="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden">
+      <section id="services" class="services">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h2>testimonials</h2>
           </div>
-          <div class="swiper-pagination"></div>
-        </div>
+      <div class="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
+          <div class="flex justify-center">
+            
+        
 
+              <!-- Fancy testimonial slider component -->
+              <div class="w-full max-w-3xl mx-auto text-center" x-data="slider">
+                  <!-- Testimonial image -->
+                  <div class="relative h-32">
+                      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[480px] h-[480px] pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-b before:from-indigo-500/25 before:via-indigo-500/5 before:via-25% before:to-indigo-500/0 before:to-75% before:rounded-full before:-z-10">
+                          <div class="h-32 [mask-image:_linear-gradient(0deg,transparent,theme(colors.white)_20%,theme(colors.white))]">
+                              <!-- Alpine.js template for testimonial images: https://github.com/alpinejs/alpine#x-for -->
+                              <template x-for="(testimonial, index) in testimonials" :key="index">
+                                  <div
+                                      x-show="active === index"
+                                      class="absolute inset-0 -z-10"
+                                      x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first"
+                                      x-transition:enter-start="opacity-0 -rotate-[60deg]"
+                                      x-transition:enter-end="opacity-100 rotate-0"
+                                      x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700"
+                                      x-transition:leave-start="opacity-100 rotate-0"
+                                      x-transition:leave-end="opacity-0 rotate-[60deg]"
+                                  >
+                                      <img class="relative top-11 left-1/2 -translate-x-1/2 rounded-full" :src="testimonial.img" width="100" height="100" :alt="testimonial.name">
+                                  </div>
+                              </template>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Text -->
+                  <div class="mb-9">
+                      <div class="relative flex flex-col transition-all duration-150 delay-300 ease-in-out" x-ref="testimonials">
+                          <!-- Alpine.js template for testimonials: https://github.com/alpinejs/alpine#x-for -->
+                          <template x-for="(testimonial, index) in testimonials" :key="index">
+                              <div
+                                  x-show="active === index"
+                                  x-transition:enter="transition ease-in-out duration-500 delay-200 order-first"
+                                  x-transition:enter-start="opacity-0 -translate-x-4"
+                                  x-transition:enter-end="opacity-100 translate-x-0"
+                                  x-transition:leave="transition ease-out duration-300 delay-300 absolute"
+                                  x-transition:leave-start="opacity-100 translate-x-0"
+                                  x-transition:leave-end="opacity-0 translate-x-4"
+                              >
+                                  <div class="text-2xl font-bold text-slate-900 before:content-['\201C'] after:content-['\201D']" x-text="testimonial.quote"></div>
+                              </div>
+                          </template>
+                      </div>
+                  </div>
+                  <!-- Buttons -->
+                  <div class="flex flex-wrap justify-center -m-1.5">
+                      <!-- Alpine.js template for buttons: https://github.com/alpinejs/alpine#x-for -->
+                      <template x-for="(testimonial, index) in testimonials" :key="index">
+                          <button
+                              class="inline-flex justify-center whitespace-nowrap rounded-full px-3 py-1.5 m-1.5 text-xs shadow-sm focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150"
+                              :class="active === index ? 'bg-indigo-500 text-white shadow-indigo-950/10' : 'bg-white hover:bg-indigo-100 text-slate-900'"
+                              @click="active = index; stopAutorotate();"
+                          >
+                              <span x-text="testimonial.name"></span> <span :class="active === index ? 'text-indigo-200' : 'text-slate-300'">-</span> <span x-text="testimonial.role"></span>
+                          </button>
+                      </template>
+                  </div>
+              </div>
+              <!-- Slider data and functionality: https://github.com/alpinejs/alpine -->
+              <script>
+                  document.addEventListener('alpine:init', () => {
+                      Alpine.data('slider', () => ({
+                          active: 0,
+                          autorotate: true,
+                          autorotateTiming: 7000,
+                          testimonials: [
+                              {
+                                  img: 'test1.jpg',
+                                  quote: " Ronny Ferns Travel Company has truly made my travel experiences memorable. From meticulously planned itineraries to exceptional customer service, they have consistently exceeded my expectations.",
+                                  name:"Jeeshan Kholi",
+                                  role: 'Intiguine Ltd'
+                              },
+                              {
+                                  img: 'test2.jpg',
+                                  quote: "Ronny Ferns Travel Company made my dream vacation a reality. Their expert planning and attention to detail ensured a hassle-free and unforgettable journey",
+                                  name: 'Denin kallachiyel',
+                                  role: 'DB Federation.'
+                              },
+                              {
+                                  img: 'test3.jpg',
+                                  quote: "Ronny Ferns Travel Company is my trusted travel partner. They consistently deliver exceptional adventures, making every moment memorable .",
+                                  name: 'Shivam Malpani',
+                                  role: 'Student Coordinator'
+                              },
+                          ],
+                          init() {
+                              if (this.autorotate) {
+                                  this.autorotateInterval = setInterval(() => {
+                                      this.active = this.active + 1 === this.testimonials.length ? 0 : this.active + 1
+                                  }, this.autorotateTiming)
+                              }
+                              this.$watch('active', callback => this.heightFix())
+                          },
+                          stopAutorotate() {
+                              clearInterval(this.autorotateInterval)
+                              this.autorotateInterval = null
+                          },
+                          heightFix() {
+                              this.$nextTick(() => {
+                                  this.$refs.testimonials.style.height = this.$refs.testimonials.children[this.active + 1].offsetHeight + 'px'
+                              })
+                          }
+                      }))
+                  })
+              </script>
+              <!-- End: Fancy testimonial slider component -->
+            </div>
+          </div>
+            </section>
+          
       </div>
-    </section><!-- End Testimonials Section -->
+  </main>
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <h3>Check our <span>Portfolio</span></h3>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-stay">Stay</li>
-              <li data-filter=".filter-enter">Entertainment</li>
-              <li data-filter=".filter-travel">Travel</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-stay">
-            <img
-              src="https://static.wixstatic.com/media/e0f60a_41d44c85f2864f8d94d1e2a1e9a93464~mv2.jpeg/v1/fill/w_736,h_452,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Assagao%20Villa.jpeg"
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Stay 1</h4>
-              <p>Stay</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_41d44c85f2864f8d94d1e2a1e9a93464~mv2.jpeg/v1/fill/w_736,h_452,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Assagao%20Villa.jpeg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-stay">
-            <img
-              src="https://static.wixstatic.com/media/e0f60a_041ccfd63bcb4ae3bf1d655b358dd741~mv2.jpg/v1/fill/w_630,h_630,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/17944093993511275.jpg "
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Stay 3</h4>
-              <p>Stay</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_041ccfd63bcb4ae3bf1d655b358dd741~mv2.jpg/v1/fill/w_630,h_630,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/17944093993511275.jpg"
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
+   
 
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-stay">
-            <img
-              src="https://static.wixstatic.com/media/e0f60a_74dfcc11cbf3478cbce6d86c1ec66b5f~mv2.jpg/v1/fill/w_572,h_572,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/17897318845853059.jpg "
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Stay 2</h4>
-              <p>Stay</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_74dfcc11cbf3478cbce6d86c1ec66b5f~mv2.jpg/v1/fill/w_572,h_572,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/17897318845853059.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="https://static.wixstatic.com/media/e0f60a_d6712426c1a646eebe5c032f970e9887~mv2.jpg/v1/crop/x_240,y_548,w_840,h_772/fill/w_608,h_558,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/1e6cce93-efda-4a7b-941f-da78d0eb83ac.jpg https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Travel 2</h4>
-              <p>Travel</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_d6712426c1a646eebe5c032f970e9887~mv2.jpg/v1/crop/x_240,y_548,w_840,h_772/fill/w_608,h_558,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/1e6cce93-efda-4a7b-941f-da78d0eb83ac.jpg https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Travel 1</h4>
-              <p>Travel</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Travel 1</h4>
-              <p>Travel</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C1.jpg"
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Travel 1</h4>
-              <p>Travel</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C2.jpg"
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Travel 1</h4>
-              <p>Travel</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C3.jpg"
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Travel 1</h4>
-              <p>Travel</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C4.jpg"
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Travel 1</h4>
-              <p>Travel</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>\
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C5.jpg"
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Travel 1</h4>
-              <p>Travel</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C6.jpg"
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Travel 1</h4>
-              <p>Travel</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C7.jpg"
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Travel 1</h4>
-              <p>Travel</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C8.jpg"
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Travel 1</h4>
-              <p>Travel</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C9.jpg"
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Travel 1</h4>
-              <p>Travel</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C11.jpg"
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Travel 1</h4>
-              <p>Travel</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-travel">
-            <img
-              src="./assets/img/testimonials/C12.jpg"
-              class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Travel 1</h4>
-              <p>Travel</p>
-              <a href="https://static.wixstatic.com/media/e0f60a_2ceeb227b6fc4f4a85198f4016268267~mv2.jpg/v1/fill/w_617,h_462,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a0aa8d16-8cd9-41fb-a7aa-66cc951657ef.jpg "
-                data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i
-                  class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-         
-
-      </div>
-    </section><!-- End Portfolio Section -->
 
     
-
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Pricing</h2>
-          <h3>Check our <span>Pricing</span></h3>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae
-            autem.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="box">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
-            <div class="box featured">
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-            <div class="box">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
-            <div class="box">
-              <span class="advanced">Advanced</span>
-              <h3>Ultimate</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Pricing Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq section-bg">

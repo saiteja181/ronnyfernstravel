@@ -86,11 +86,10 @@
         </h3>
     </div>
 
-    <div class="w-screen " style="height:100vh">
+    <div class="w-screen h-screen flex justify-center items-center">
+        <ul id="slider" class="flex-row relative items-center p-5" style="width: 90%; height: 90%;">
 
-        <ul id="slider" class="flex-row w-screen  ml-24 mr-24 relative" style="height: 90%;">
-
-            <li class="p-2 border   relative shadow-xl   h-full  mr-10 inline-block" style="width:27%;height:100%"
+            <li id="tourSection" class="p-2 border   relative shadow-xl   h-full  mr-10 inline-block" style="width:27%;height:100%"
                 data-aos="zoom-in" data-aos-delay="100">
 
                 <div class="image"
@@ -114,13 +113,13 @@
                     3X Dive in Time
                 </div>
                 <button class="btn-cards "
-                    style="margin-left:70px;margin-top:15px; text-align: center;position: absolute;">Book
+                    style="margin-left:70px;margin-top:15px; text-align: center;position: absolute;" onclick="showMessage()" >Book
                     Now</button>
             </li>
+            
 
 
-
-            <li class="p-2 border  relative shadow-xl  mr-5  h-full  inline-block" style="width:27%;height:100%;"
+            <li  id="tourSection" class="p-2 border  relative shadow-xl  mr-5  h-full  inline-block" style="width:27%;height:100%;"
                 data-aos="zoom-in" data-aos-delay="100">
 
                 <div class="image"
@@ -145,11 +144,11 @@
                     Grafting,Beach Tour.
                 </div>
                 <button class="btn-cards "
-                    style="margin-left:70px; margin-top:15px;position: absolute;text-align: center;">Book
+                    style="margin-left:70px; margin-top:15px;position: absolute;text-align: center;" onclick="showMessage()" >Book
                     Now</button>
             </li>
 
-            <li class="p-2 border  relative shadow-xl  mr-5  h-full  inline-block" style="width:27%;height:100%;"
+            <li  id="tourSection" class="p-2 border  relative shadow-xl  mr-5  h-full  inline-block" style="width:27%;height:100%;"
                 data-aos="zoom-in" data-aos-delay="100">
 
                 <div class="image"
@@ -174,13 +173,28 @@
                     Grafting,Beach Tour.
                 </div>
                 <button class="btn-cards "
-                    style="margin-left:70px; margin-top:15px;position: absolute;text-align: center;">Book
+                    style="margin-left:70px; margin-top:15px;position: absolute;text-align: center;" onclick="showMessage()" >Book
                     Now</button>
             </li>
             
 
 
         </ul>
+        <script>
+            function showMessage() {
+                var sectionName = document.querySelector('#tourSection .heading').textContent;
+                var sectionPrice = document.querySelector('#tourSection .price').textContent;
+                var phoneNumber = '9121945249'; // Replace with your WhatsApp number
+    
+             var message = `I would like to book the ${sectionName} tour for ${sectionPrice}.`;
+    
+                var whatsappUrl = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+                    window.open(whatsappUrl, '_blank');
+
+    window.open(whatsappLink);
+            }
+        </script>
+
     </div>
     <section id="testimonals" class="bg-cover w-screen">
         <div>
